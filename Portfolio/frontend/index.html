@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prakhar Tamrakar — AI/ML Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo"><span class="logo-bracket">&lt;</span>PT<span class="logo-bracket">/&gt;</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#learning">Learning</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        
+        <a href="./public/images/Prakhar_Resume_.pdf" class="nav-resume" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Resume
+        </a>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+      </div>
+      <button class="nav-burger" id="nav-burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#learning">Learning</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-particles" id="hero-particles"></div>
+    <div class="hero-inner">
+      <div class="hero-content" data-reveal>
+        <div class="hero-badge"><span class="badge-dot"></span>Available for opportunities</div>
+        <h1 class="hero-heading">
+          Building Intelligent<br/>
+          <span class="gradient-text">AI Systems</span><br/>
+          for Real-World Impact
+        </h1>
+        <p class="hero-sub">
+          I am <strong>Prakhar</strong>, an <strong>AI/ML Software Engineer</strong> specializing in Generative AI, RAG systems, Agentic AI, LangChain, LangGraph, and enterprise AI deployment.
+        </p>
+        <div class="hero-tags">
+          <span class="tag"># Generative AI</span>
+          <span class="tag"># LangChain</span>
+          <span class="tag"># Azure AI</span>
+          <span class="tag"># RAG</span>
+          <span class="tag"># MCP</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            View Projects
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-reveal data-delay="200">
+        <div class="avatar-container">
+          <div class="avatar-ring ring-1"></div>
+          <div class="avatar-ring ring-2"></div>
+          <div class="avatar-ring ring-3"></div>
+          <div class="avatar-core">
+            <img src="public/images/images.jpg" alt="Prakhar Tamrakar" class="avatar-img" onerror="this.style.display='none';this.parentElement.querySelector('.avatar-initials').style.display='flex'" />
+            <div class="avatar-initials">PT</div>
+          </div>
+          <div class="avatar-orbs">
+            <div class="orb orb-1">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="orb orb-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="orb orb-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="code-float code-float-1">
+          <span class="cf-lang">Python</span>
+          <pre><span class="cf-kw">from</span> langchain <span class="cf-kw">import</span> <span class="cf-cls">Agent</span>
+agent = <span class="cf-cls">Agent</span>.build(
+  llm=<span class="cf-str">"gpt-4o"</span>
+)</pre>
+        </div>
+        <div class="code-float code-float-2">
+          <span class="cf-lang">Azure AI</span>
+          <pre><span class="cf-kw">rag</span>.<span class="cf-fn">retrieve</span>(
+  query, top_k=<span class="cf-num">5</span>
+)</pre>
+        </div>
+        <canvas class="neural-canvas" id="neural-canvas"></canvas>
+      </div>
+    </div>
+    <div class="hero-scroll-hint"><span>Scroll to explore</span><div class="scroll-line"></div></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label" data-reveal>About Me</div>
+      <h2 class="section-heading" data-reveal>The Mind Behind<br/><span class="gradient-text">the Machine</span></h2>
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <p>I’m a Software Developer specializing in AI engineering and Generative AI systems. I build production-ready intelligent applications using <strong>Python</strong>, <strong>LangChain</strong>, <strong>LangGraph</strong>, <strong>Azure AI Foundry</strong>, and <strong>Model Context Protocol (MCP)</strong>.</p>
+
+          <p>With deep expertise in enterprise AI deployment, I bridge the gap between cutting-edge research and real-world production systems — delivering AI products that scale, perform, and create tangible business value.</p>
+
+          <p>Currently working at <strong>InfoBeans Technologies</strong>, I’m passionate about building systems that think, reason, and act autonomously.</p>
+
+        <div class="about-pillars">
+            <div class="pillar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              <span>RAG Systems</span>
+            </div>
+            <div class="pillar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              <span>AI Agents</span>
+            </div>
+            <div class="pillar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              <span>Enterprise AI</span>
+            </div>
+            <div class="pillar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <span>Computer Vision</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-stats" data-reveal data-delay="200">
+          <div class="stat-card glass-card">
+            <div class="stat-number" data-count="3">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-label">Production AI Systems</div>
+            <div class="stat-glow"></div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-number" data-count="3">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-label">Enterprise Projects</div>
+            <div class="stat-glow"></div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-number" data-count="10">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-label">GenAI Stack Tools</div>
+            <div class="stat-glow"></div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-number" data-count="1.5">0</div>
+            <div class="stat-plus"></div>
+            <div class="stat-label">Years at InfoBeans</div>
+            <div class="stat-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label" data-reveal>Expertise</div>
+      <h2 class="section-heading" data-reveal>Technical <span class="gradient-text">Arsenal</span></h2>
+      <div class="skills-grid">
+
+        <div class="skill-category glass-card" data-reveal>
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <h3>AI / ML</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item"><div class="skill-top"><span>Python</span><span class="skill-pct">95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
+            <div class="skill-item"><div class="skill-top"><span>TensorFlow</span><span class="skill-pct">78%</span></div><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div>
+            <div class="skill-item"><div class="skill-top"><span>OpenCV</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+            <div class="skill-item"><div class="skill-top"><span>Knowledge Graph</span><span class="skill-pct">72%</span></div><div class="skill-bar"><div class="skill-fill" data-width="72"></div></div></div>
+          </div>
+          <div class="cat-badge-row">
+            <span class="cat-badge">Model Finetuning</span><span class="cat-badge">TensorFlow</span><span class="cat-badge">OpenCV</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card" data-reveal data-delay="100">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon icon-cyan">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3>Generative AI</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item"><div class="skill-top"><span>LangChain</span><span class="skill-pct">92%</span></div><div class="skill-bar"><div class="skill-fill cyan-fill" data-width="92"></div></div></div>
+            <div class="skill-item"><div class="skill-top"><span>LangGraph</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill cyan-fill" data-width="88"></div></div></div>
+            <div class="skill-item"><div class="skill-top"><span>RAG Systems</span><span class="skill-pct">95%</span></div><div class="skill-bar"><div class="skill-fill cyan-fill" data-width="90"></div></div></div>
+            <div class="skill-item"><div class="skill-top"><span>MCP</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill cyan-fill" data-width="85"></div></div></div>
+          </div>
+          <div class="cat-badge-row">
+            <span class="cat-badge badge-cyan">RAG</span><span class="cat-badge badge-cyan">Prompt Eng.</span><span class="cat-badge badge-cyan">Agents</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card" data-reveal data-delay="200">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon icon-purple">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <h3>Cloud / DevOps</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item"><div class="skill-top"><span>Azure</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill purple-fill" data-width="88"></div></div></div>
+            <div class="skill-item"><div class="skill-top"><span>Azure APIM</span><span class="skill-pct">82%</span></div><div class="skill-bar"><div class="skill-fill purple-fill" data-width="82"></div></div></div>
+            <div class="skill-item"><div class="skill-top"><span>Azure AI Foundry</span><span class="skill-pct">78%</span></div><div class="skill-bar"><div class="skill-fill purple-fill" data-width="78"></div></div></div>
+            <div class="skill-item"><div class="skill-top"><span>Azure Monitoring & Observability</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill purple-fill" data-width="80"></div></div></div>
+          </div>
+          <div class="cat-badge-row">
+            <span class="cat-badge badge-purple">Azure</span><span class="cat-badge badge-purple">MLflow</span><span class="cat-badge badge-purple">Langfuse</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card" data-reveal data-delay="300">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon icon-green">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3>Backend / Databases</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item"><div class="skill-top"><span>Python</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill green-fill" data-width="85"></div></div></div>
+            <div class="skill-item"><div class="skill-top"><span>Fastapi/Flask</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill green-fill" data-width="80"></div></div></div>
+            <div class="skill-item"><div class="skill-top"><span>Java</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill green-fill" data-width="75"></div></div></div>
+            <div class="skill-item"><div class="skill-top"><span>MySql</span><span class="skill-pct">82%</span></div><div class="skill-bar"><div class="skill-fill green-fill" data-width="82"></div></div></div>
+          </div>
+          <div class="cat-badge-row">
+            <span class="cat-badge badge-green">REST APIs</span><span class="cat-badge badge-green">MySQL</span><span class="cat-badge badge-green">OCR</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-label" data-reveal>Career</div>
+      <h2 class="section-heading" data-reveal>Work <span class="gradient-text">Experience</span></h2>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-item" data-reveal>
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-card glass-card">
+            <div class="tc-header">
+              <div>
+                <div class="tc-role">Trainee Software Engineer</div>
+                <div class="tc-company">InfoBeans Technologies</div>
+              </div>
+              <div class="tc-meta">
+                <div class="tc-duration">Jan 2025 – Present</div>
+                <div class="tc-badge active-badge">Active</div>
+              </div>
+            </div>
+            <ul class="tc-list">
+              <li>Built and deployed AI-powered production systems at enterprise scale</li>
+              <li>Developed enterprise applications using <strong>LangChain</strong> and <strong>LangGraph</strong></li>
+              <li>Integrated Azure AI Agents into production-grade applications.</li>
+              <li>Integrated Azure AI Foundry with enterprise APIs and managed identity</li>
+              <li>Implemented AI observability using <strong>Langfuse</strong> for end-to-end tracing</li>
+              <li>Built agentic AI workflows capable of autonomous multi-step reasoning</li>
+               <li>Built multi agent workflows (Multi Agent Orchestration)</li>
+              <li>Developed computer vision systems with <strong>OpenCV</strong> and TensorFlow</li>
+              <li>Built RAG-based document intelligence systems with Azure Document Intelligence</li>
+            </ul>
+            <div class="tc-tags">
+              <span>LangChain</span><span>LangGraph</span><span>Azure AI</span><span>RAG</span><span>MCP</span><span>AI Agents</span><span>Knowledge Graph</span><span>RAG Evaluation</span><span>LLM Monitoring & Tracing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label" data-reveal>Portfolio</div>
+      <h2 class="section-heading" data-reveal>Featured <span class="gradient-text">Projects</span></h2>
+      <p class="section-sub" data-reveal>Production-grade AI systems built for real enterprise environments.</p>
+      <div class="projects-grid">
+
+        <div class="project-card glass-card tilt-card" data-reveal>
+          <div class="project-mock mock-dashboard">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-content">
+              <div class="mock-sidebar">
+                <div class="mock-line"></div><div class="mock-line short"></div>
+                <div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div>
+              </div>
+              <div class="mock-main">
+                <div class="mock-header-block">
+                  <div class="mock-pill blue"></div>
+                  <div class="mock-pill small"></div>
+                </div>
+                <div class="mock-chart">
+                  <div class="chart-bar" style="height:40%"></div>
+                  <div class="chart-bar" style="height:70%"></div>
+                  <div class="chart-bar" style="height:55%"></div>
+                  <div class="chart-bar" style="height:90%"></div>
+                  <div class="chart-bar" style="height:65%"></div>
+                  <div class="chart-bar" style="height:80%"></div>
+                </div>
+                <div class="mock-cards-row">
+                  <div class="mock-mini-card"></div>
+                  <div class="mock-mini-card"></div>
+                  <div class="mock-mini-card"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-num">01</div>
+            <h3 class="project-title">CSA RFQ System</h3>
+            <p class="project-desc">Enterprise-grade RFQ AI system using Model Context Protocol architecture with scalable Azure deployment and distributed tracing.</p>
+            <div class="project-details">
+              <div class="project-detail"><div class="detail-label">Problem</div><div class="detail-text">Manual RFQ processing bottlenecks costing enterprise hours per quote cycle</div></div>
+              <div class="project-detail"><div class="detail-label">Solution</div><div class="detail-text">MCP client-server AI architecture with Azure APIM for secure, scalable automation</div></div>
+              <div class="project-detail"><div class="detail-label">Impact</div><div class="detail-text">Production deployment with full observability and distributed tracing</div></div>
+            </div>
+            <div class="project-stack">
+              <span class="stack-tag">MCP</span><span class="stack-tag">Azure AI Foundry</span><span class="stack-tag">Azure APIM</span><span class="stack-tag">Python</span>
+            </div>
+          </div>
+          <div class="project-hover-glow"></div>
+        </div>
+
+        <div class="project-card glass-card tilt-card" data-reveal data-delay="150">
+          <div class="project-mock mock-ai">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-content ai-content">
+              <div class="ai-interface">
+                <div class="ai-msg ai-msg-user">What are our Q4 projections?</div>
+                <div class="ai-msg ai-msg-bot-text">Based on current data analysis, Q4 growth is projected at 23% with key drivers being AI adoption and platform expansion...</div>
+                <div class="ai-metrics-row">
+                  <div class="ai-metric"><div class="am-val">+23%</div><div class="am-lbl">Growth</div></div>
+                  <div class="ai-metric"><div class="am-val">94%</div><div class="am-lbl">Accuracy</div></div>
+                  <div class="ai-metric"><div class="am-val">0.8s</div><div class="am-lbl">Latency</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-num">02</div>
+            <h3 class="project-title">InfoBeans AI Homepage</h3>
+            <p class="project-desc">AI-powered internal homepage with optimized prompt engineering and model experimentation tracking via MLflow.</p>
+            <div class="project-details">
+              <div class="project-detail"><div class="detail-label">Problem</div><div class="detail-text">Inconsistent AI responses with no visibility into model performance across experiments</div></div>
+              <div class="project-detail"><div class="detail-label">Solution</div><div class="detail-text">LangChain-powered AI workflows with MLflow experiment tracking and prompt optimization</div></div>
+              <div class="project-detail"><div class="detail-label">Impact</div><div class="detail-text">Repeatable AI outputs with full audit trail across all experiments</div></div>
+            </div>
+            <div class="project-stack">
+              <span class="stack-tag">LangChain</span><span class="stack-tag">Python</span><span class="stack-tag">MLflow</span>
+            </div>
+          </div>
+          <div class="project-hover-glow"></div>
+        </div>
+
+        <div class="project-card project-card-wide glass-card tilt-card" data-reveal data-delay="300">
+          <div class="project-mock mock-doc">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-content doc-content">
+              <div class="doc-left">
+                <div class="doc-page">
+                  <div class="doc-line"></div><div class="doc-line short"></div>
+                  <div class="doc-formula">∫₀^∞ f(x)dx = Σ aₙxⁿ</div>
+                  <div class="doc-line"></div><div class="doc-line short"></div>
+                  <div class="doc-formula">E = mc² + ΔH</div>
+                  <div class="doc-line"></div>
+                </div>
+              </div>
+              <div class="doc-right">
+                <div class="doc-extract-label">Extracted</div>
+                <div class="doc-extract-item"><span class="dei-icon">✓</span><span>Section 4.2 — Thermal</span></div>
+                <div class="doc-extract-item"><span class="dei-icon">✓</span><span>Formula: ∫₀^∞ f(x)dx</span></div>
+                <div class="doc-extract-item"><span class="dei-icon">✓</span><span>Equation: E = mc²</span></div>
+                <div class="doc-rag">
+                  <div class="doc-rag-label">RAG Query</div>
+                  <div class="doc-rag-input">"HVAC thermal formula"</div>
+                  <div class="doc-rag-result">Top match: 98.2% — Section 4.2</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-num">03</div>
+            <h3 class="project-title">ASHRAE Document Processing System</h3>
+            <p class="project-desc">Document intelligence pipeline extracting structured text and complex mathematical equations from PDFs with semantic retrieval.</p>
+            <div class="project-details">
+              <div class="project-detail"><div class="detail-label">Problem</div><div class="detail-text">ASHRAE PDFs contain complex LaTeX-like formulas that standard OCR fails to parse</div></div>
+              <div class="project-detail"><div class="detail-label">Solution</div><div class="detail-text">Custom OCR + Azure Document Intelligence + RAG pipeline for formula-aware semantic retrieval</div></div>
+              <div class="project-detail"><div class="detail-label">Impact</div><div class="detail-text">Accurate extraction and retrieval of technical documents with mathematical content</div></div>
+            </div>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span><span class="stack-tag">RAG</span><span class="stack-tag">OCR</span><span class="stack-tag">Azure Doc Intelligence</span>
+            </div>
+          </div>
+          <div class="project-hover-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENTLY LEARNING -->
+  <section class="learning section" id="learning">
+    <div class="container">
+      <div class="section-label" data-reveal>Growth Mindset</div>
+      <h2 class="section-heading" data-reveal>Currently <span class="gradient-text">Learning</span></h2>
+      <p class="section-sub" data-reveal>Always expanding the stack — here's what I'm actively studying and leveling up in.</p>
+      
+      <div class="learn-grid">
+        <!-- AWS Cloud -->
+        <div class="learn-card glass-card" data-reveal>
+          <div class="learn-card-top">
+            <div class="learn-icon" style="--icon-color:#f59e0b;--icon-bg:rgba(245,158,11,0.12);--icon-border:rgba(245,158,11,0.2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+              </svg>
+            </div>
+            <div class="learn-status in-progress">Exploring</div>
+          </div>
+          <h3 class="learn-title">AWS Cloud</h3>
+          <p class="learn-desc">Diving into AWS fundamentals — EC2, S3, Lambda, API Gateway, and building scalable cloud infrastructure.</p>
+          <div class="learn-topics">
+            <span>EC2 & VPC</span>
+            <span>S3 & IAM</span>
+            <span>Lambda</span>
+            <span>SageMaker</span>
+          </div>
+          <div class="learn-progress-wrap">
+            <div class="learn-progress-label"><span>Progress</span><span>10%</span></div>
+            <div class="learn-bar">
+              <div class="learn-bar-fill" data-width="10" style="--bar-color:linear-gradient(90deg,#f59e0b,#fbbf24)"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LLMOps -->
+        <div class="learn-card glass-card" data-reveal data-delay="100">
+          <div class="learn-card-top">
+            <div class="learn-icon" style="--icon-color:#06b6d4;--icon-bg:rgba(6,182,212,0.12);--icon-border:rgba(6,182,212,0.2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <div class="learn-status in-progress">Studying</div>
+          </div>
+          <h3 class="learn-title">LLMOps</h3>
+          <p class="learn-desc">Mastering LLM deployment, monitoring, prompt versioning, and production-grade AI observability.</p>
+          <div class="learn-topics">
+            <span>Langfuse</span>
+            <span>Prompt Versioning</span>
+            <span>LLM Tracing</span>
+            <span>Evaluation</span>
+          </div>
+          <div class="learn-progress-wrap">
+            <div class="learn-progress-label"><span>Progress</span><span>10%</span></div>
+            <div class="learn-bar">
+              <div class="learn-bar-fill" data-width="10" style="--bar-color:linear-gradient(90deg,#06b6d4,#67e8f9)"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MLOps -->
+        <div class="learn-card glass-card" data-reveal data-delay="200">
+          <div class="learn-card-top">
+            <div class="learn-icon" style="--icon-color:#10b981;--icon-bg:rgba(16,185,129,0.12);--icon-border:rgba(16,185,129,0.2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+              </svg>
+            </div>
+            <div class="learn-status studying">Studying</div>
+          </div>
+          <h3 class="learn-title">MLOps</h3>
+          <p class="learn-desc">Building ML pipelines, model versioning, experiment tracking with MLflow, and continuous deployment.</p>
+          <div class="learn-topics">
+            <span>MLflow</span>
+            <span>Model Registry</span>
+            <span>CI/CD for ML</span>
+            <span>Monitoring</span>
+          </div>
+          <div class="learn-progress-wrap">
+            <div class="learn-progress-label"><span>Progress</span><span>45%</span></div>
+            <div class="learn-bar">
+              <div class="learn-bar-fill" data-width="45" style="--bar-color:linear-gradient(90deg,#10b981,#6ee7b7)"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- System Design -->
+        <div class="learn-card glass-card" data-reveal data-delay="300">
+          <div class="learn-card-top">
+            <div class="learn-icon" style="--icon-color:#8b5cf6;--icon-bg:rgba(139,92,246,0.12);--icon-border:rgba(139,92,246,0.2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18M9 21V9"/>
+              </svg>
+            </div>
+            <div class="learn-status exploring">Exploring</div>
+          </div>
+          <h3 class="learn-title">System Design</h3>
+          <p class="learn-desc">Learning to architect scalable distributed systems, microservices, and high-performance applications.</p>
+          <div class="learn-topics">
+            <span>Microservices</span>
+            <span>Load Balancing</span>
+            <span>Caching</span>
+            <span>Databases</span>
+          </div>
+          <div class="learn-progress-wrap">
+            <div class="learn-progress-label"><span>Progress</span><span>10%</span></div>
+            <div class="learn-bar">
+              <div class="learn-bar-fill" data-width="10" style="--bar-color:linear-gradient(90deg,#8b5cf6,#c4b5fd)"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agentic Frameworks -->
+        <div class="learn-card glass-card" data-reveal data-delay="150">
+          <div class="learn-card-top">
+            <div class="learn-icon" style="--icon-color:#2563eb;--icon-bg:rgba(37,99,235,0.12);--icon-border:rgba(37,99,235,0.2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              </svg>
+            </div>
+            <div class="learn-status in-progress">In Progress</div>
+          </div>
+          <h3 class="learn-title">Agentic Frameworks</h3>
+          <p class="learn-desc">Deep-diving into CrewAI, AutoGen, and advanced multi-agent orchestration patterns.</p>
+          <div class="learn-topics">
+            <span>CrewAI</span>
+            <span>AutoGen</span>
+            <span>LangGraph</span>
+            <span>Agent Protocols</span>
+          </div>
+          <div class="learn-progress-wrap">
+            <div class="learn-progress-label"><span>Progress</span><span>45%</span></div>
+            <div class="learn-bar">
+              <div class="learn-bar-fill" data-width="45" style="--bar-color:linear-gradient(90deg,#2563eb,#3b82f6)"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RAG Evaluation -->
+        <div class="learn-card glass-card" data-reveal data-delay="250">
+          <div class="learn-card-top">
+            <div class="learn-icon" style="--icon-color:#ef4444;--icon-bg:rgba(239,68,68,0.12);--icon-border:rgba(239,68,68,0.2);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+              </svg>
+            </div>
+            <div class="learn-status studying">In Progress</div>
+          </div>
+          <h3 class="learn-title"> RAG Evaluation</h3>
+          <p class="learn-desc">Exploring RAGAS, Uptrain, TRULens for the evalution of the RAG systems for more accuracy.</p>
+          <div class="learn-topics">
+            <span>RAGAS</span>
+            <span>Uptrain</span>
+            <span>TRULens</span>
+            <span>DeepEval</span>
+          </div>
+          <div class="learn-progress-wrap">
+            <div class="learn-progress-label"><span>Progress</span><span>50%</span></div>
+            <div class="learn-bar">
+              <div class="learn-bar-fill" data-width="50" style="--bar-color:linear-gradient(90deg,#ef4444,#f87171)"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GITHUB -->
+  <section class="github section" id="github">
+    <div class="container">
+      <div class="section-label" data-reveal>Open Source</div>
+      <h2 class="section-heading" data-reveal>GitHub <span class="gradient-text">Showcase</span></h2>
+      <div class="github-grid">
+        <div class="github-card glass-card" data-reveal>
+          <div class="gh-terminal">
+            <div class="gh-term-bar">
+              <span class="tb-dot red"></span><span class="tb-dot yellow"></span><span class="tb-dot green"></span>
+              <span class="tb-path">~/rag-pipeline</span>
+            </div>
+            <div class="gh-term-body">
+              <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">python run_rag.py</span></div>
+              <div class="term-line out"><span class="term-green">✓</span> Vector store loaded (1,247 chunks)</div>
+              <div class="term-line out"><span class="term-green">✓</span> Embeddings: text-embedding-3-large</div>
+              <div class="term-line out"><span class="term-blue">→</span> Query: "ASHRAE thermal formulas"</div>
+              <div class="term-line out"><span class="term-cyan">⚡</span> Top-1 score: 0.982 | Latency: 0.34s</div>
+            </div>
+          </div>
+          <div class="gh-card-meta">
+            <h4>RAG Pipeline</h4>
+            <p>Production-ready retrieval-augmented generation system with vector store and semantic search.</p>
+            <div class="gh-lang"><span class="lang-dot"></span> Python</div>
+          </div>
+        </div>
+        <div class="github-card glass-card" data-reveal data-delay="150">
+          <div class="gh-terminal">
+            <div class="gh-term-bar">
+              <span class="tb-dot red"></span><span class="tb-dot yellow"></span><span class="tb-dot green"></span>
+              <span class="tb-path">~/ai-agent</span>
+            </div>
+            <div class="gh-term-body">
+              <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">python agent.py --task analyze</span></div>
+              <div class="term-line out"><span class="term-green">✓</span> Agent initialized: GPT-4o + tools</div>
+              <div class="term-line out"><span class="term-blue">→</span> Step 1: Gathering context...</div>
+              <div class="term-line out"><span class="term-blue">→</span> Step 2: Reasoning over data...</div>
+              <div class="term-line out"><span class="term-cyan">✓</span> Task completed in 3 steps (1.2s)</div>
+            </div>
+          </div>
+          <div class="gh-card-meta">
+            <h4>LangGraph Agent</h4>
+            <p>Multi-step agentic workflow with LangGraph state machine and tool-calling capabilities.</p>
+            <div class="gh-lang"><span class="lang-dot lang-dot-cyan"></span> LangChain</div>
+          </div>
+        </div>
+        <div class="github-card glass-card" data-reveal data-delay="300">
+          <div class="gh-terminal">
+            <div class="gh-term-bar">
+              <span class="tb-dot red"></span><span class="tb-dot yellow"></span><span class="tb-dot green"></span>
+              <span class="tb-path">~/mcp-server</span>
+            </div>
+            <div class="gh-term-body">
+              <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">python mcp_server.py</span></div>
+              <div class="term-line out"><span class="term-green">✓</span> MCP Server running on :8080</div>
+              <div class="term-line out"><span class="term-green">✓</span> Azure APIM gateway connected</div>
+              <div class="term-line out"><span class="term-blue">→</span> Langfuse tracing enabled</div>
+              <div class="term-line out"><span class="term-cyan">⚡</span> Ready to serve RFQ requests</div>
+            </div>
+          </div>
+          <div class="gh-card-meta">
+            <h4>MCP Server</h4>
+            <p>Model Context Protocol server with Azure APIM integration and full Langfuse observability.</p>
+            <div class="gh-lang"><span class="lang-dot lang-dot-purple"></span> Python + Azure</div>
+          </div>
+        </div>
+      </div>
+      <div class="github-link-row" data-reveal>
+        <a href="https://github.com/prakhartamrakar23" class="btn btn-secondary" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          View GitHub Profile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label" data-reveal>Get In Touch</div>
+      <h2 class="section-heading" data-reveal>Let's Build Something<br/><span class="gradient-text">Intelligent</span></h2>
+      <div class="contact-centered">
+        <p class="contact-intro" data-reveal>Whether you have an exciting AI project, a collaboration opportunity, or just want to discuss LLMs and RAG systems — I'd love to connect.</p>
+        <div class="contact-items-centered" data-reveal data-delay="100">
+            <a href="mailto:prakhartamrakar99@gmail.com" class="contact-item glass-card">
+              <div class="ci-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="ci-text"><div class="ci-label">Email</div><div class="ci-value">prakhartamrakar99@gmail.com</div></div>
+            </a>
+            <a href="tel:+919630920682" class="contact-item glass-card">
+              <div class="ci-icon icon-cyan">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.58 3.38 2 2 0 0 1 3.57 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="ci-text"><div class="ci-label">Phone</div><div class="ci-value">+91 9630920682</div></div>
+            </a>
+            <a href="https://www.linkedin.com/in/tamrakarprakhar/" class="contact-item glass-card" target="_blank" rel="noopener">
+              <div class="ci-icon icon-purple">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div class="ci-text"><div class="ci-label">LinkedIn</div><div class="ci-value">Prakhar Tamrakar</div></div>
+            </a>
+            <a href="https://github.com/prakhartamrakar23" class="contact-item glass-card" target="_blank" rel="noopener">
+              <div class="ci-icon icon-green">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div class="ci-text"><div class="ci-label">GitHub</div><div class="ci-value">@prakhartamrakar</div></div>
+            </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo"><span class="logo-bracket">&lt;</span>PT<span class="logo-bracket">/&gt;</span></div>
+        <div class="footer-text">© 2025 Prakhar Tamrakar. Built with passion for AI.</div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/tamrakarprakhar/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/prakhartamrakar23" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:prakhartamrakar99@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AI VOICE ASSISTANT FAB -->
+  <div class="ai-fab-wrapper" id="voice-fab" role="button" aria-label="AI Voice Assistant" tabindex="0">
+    <div class="ai-fab-ripple"></div>
+    <div class="ai-fab-ripple ai-fab-ripple-2"></div>
+    <div class="ai-speech-bubble">I'm your Voice Assistant</div>
+    <div class="ai-bot-face">
+      <svg class="ai-bot-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bot-head-grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#1e3a8a"/>
+            <stop offset="100%" stop-color="#0e4d66"/>
+          </linearGradient>
+        </defs>
+        <!-- Head -->
+        <rect x="10" y="14" width="60" height="52" rx="18" fill="url(#bot-head-grad)"/>
+        <!-- Antenna stem -->
+        <line x1="40" y1="14" x2="40" y2="7" stroke="#06b6d4" stroke-width="2"/>
+        <!-- Antenna dot (pulsing) -->
+        <circle cx="40" cy="4" r="3" fill="#06b6d4">
+          <animate attributeName="r" values="3;4.5;3" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Left eye (blinking) -->
+        <rect x="21" y="30" width="14" height="10" rx="5" fill="#0ea5e9">
+          <animate attributeName="height" values="10;2;10" dur="4s" begin="1s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="30;34;30" dur="4s" begin="1s" repeatCount="indefinite"/>
+        </rect>
+        <!-- Right eye (blinking) -->
+        <rect x="45" y="30" width="14" height="10" rx="5" fill="#0ea5e9">
+          <animate attributeName="height" values="10;2;10" dur="4s" begin="1s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="30;34;30" dur="4s" begin="1s" repeatCount="indefinite"/>
+        </rect>
+        <!-- Mouth (wave animation) -->
+        <path d="M27 52 Q33 48 40 52 Q47 56 53 52" stroke="#60a5fa" stroke-width="2.5" fill="none" stroke-linecap="round">
+          <animate attributeName="d"
+            values="M27 52 Q33 48 40 52 Q47 56 53 52;M27 50 Q33 55 40 50 Q47 45 53 50;M27 52 Q33 48 40 52 Q47 56 53 52"
+            dur="1.8s" repeatCount="indefinite"/>
+        </path>
+        <!-- Sound wave lines (left) -->
+        <line x1="5" y1="35" x2="5" y2="45" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" opacity="0.6">
+          <animate attributeName="y1" values="35;32;35" dur="0.8s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="45;48;45" dur="0.8s" repeatCount="indefinite"/>
+        </line>
+        <line x1="1" y1="38" x2="1" y2="42" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" opacity="0.4">
+          <animate attributeName="y1" values="38;36;38" dur="0.6s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="42;44;42" dur="0.6s" repeatCount="indefinite"/>
+        </line>
+        <!-- Sound wave lines (right) -->
+        <line x1="75" y1="35" x2="75" y2="45" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" opacity="0.6">
+          <animate attributeName="y1" values="35;32;35" dur="0.8s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="45;48;45" dur="0.8s" repeatCount="indefinite"/>
+        </line>
+        <line x1="79" y1="38" x2="79" y2="42" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" opacity="0.4">
+          <animate attributeName="y1" values="38;36;38" dur="0.6s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="42;44;42" dur="0.6s" repeatCount="indefinite"/>
+        </line>
+      </svg>
+    </div>
+  </div>
+
+  <!-- VOICE AGENT MODAL POPUP -->
+  <div class="voice-modal" id="voice-modal">
+    <div class="voice-modal-inner glass-card">
+      <button class="voice-modal-close" id="voice-modal-close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <!-- Wave animation -->
+      <div class="voice-wave-container">
+        <div class="voice-wave-bars">
+          <div class="wbar"></div><div class="wbar"></div><div class="wbar"></div>
+          <div class="wbar"></div><div class="wbar"></div><div class="wbar"></div>
+          <div class="wbar"></div><div class="wbar"></div><div class="wbar"></div>
+        </div>
+      </div>
+
+      <h4 class="voice-title">Prakhar's AI Assistant</h4>
+      <p class="voice-sub">Ask me anything about Prakhar's experience, skills, or projects — by voice or text.</p>
+
+      <!-- Chat box for conversation history -->
+      <div class="agent-chat-box" id="agent-chat-box"></div>
+
+      <!-- Status line -->
+      <div class="voice-status" id="voice-status">Ready — tap the mic or type below</div>
+
+      <!-- Text input row -->
+      <div class="agent-input-row">
+        <input
+          type="text"
+          id="agent-text-input"
+          class="agent-text-input"
+          placeholder="Ask anything..."
+          autocomplete="off"
+        />
+        <button class="agent-send-btn" id="agent-send-btn" title="Send">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+
+      <!-- Voice button -->
+      <button class="voice-listen-btn" id="voice-listen-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+          <line x1="12" y1="19" x2="12" y2="23"/>
+          <line x1="8" y1="23" x2="16" y2="23"/>
+        </svg>
+        Start Listening
+      </button>
+
+      <!-- Speak toggle -->
+      <label class="speak-toggle-label">
+        <input type="checkbox" id="speak-toggle" checked />
+        <span>Speak replies</span>
+      </label>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

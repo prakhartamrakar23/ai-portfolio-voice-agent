@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Upload - Knowledge Base Manager</title>
+    <link rel="stylesheet" href="upload-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Knowledge Base Manager</h1>
+            <p class="subtitle">Upload PDFs to power your AI voice assistant</p>
+            <a href="index.html" class="btn-secondary">← Back to Chat</a>
+        </div>
+
+        <div class="upload-section">
+            <h2>Upload PDFs</h2>
+            
+            <div class="upload-box" id="uploadBox">
+                <div class="upload-icon">📄</div>
+                <p>Drag & drop PDF files here</p>
+                <p class="upload-hint">or click to browse</p>
+                <input 
+                    type="file" 
+                    id="fileInput" 
+                    accept=".pdf" 
+                    multiple 
+                    style="display: none;"
+                >
+            </div>
+
+            <div class="upload-options">
+                <label>
+                    <span>Chunk Size (words):</span>
+                    <input type="number" id="chunkSize" value="400" min="100" max="1000">
+                </label>
+                
+                <label>
+                    <span>Overlap (words):</span>
+                    <input type="number" id="overlap" value="50" min="0" max="200">
+                </label>
+                
+                <label class="checkbox-label">
+                    <input type="checkbox" id="smartChunking" checked>
+                    <span>Use smart chunking (preserves sections)</span>
+                </label>
+            </div>
+
+            <button id="uploadBtn" class="btn-primary" disabled>
+                Upload & Process
+            </button>
+        </div>
+
+        <div class="status-section" id="statusSection" style="display: none;">
+            <h3>Upload Status</h3>
+            <div id="statusContent"></div>
+        </div>
+
+        <div class="kb-section">
+            <div class="kb-header">
+                <h2>Current Knowledge Base</h2>
+                <button id="refreshBtn" class="btn-secondary">🔄 Refresh</button>
+            </div>
+            
+            <div id="kbStats" class="stats-box">
+                <p>Loading...</p>
+            </div>
+
+            <div id="pdfList" class="pdf-list">
+                <!-- PDFs will be listed here -->
+            </div>
+        </div>
+
+        <div class="danger-zone">
+            <h3>⚠️ Danger Zone</h3>
+            <button id="rebuildBtn" class="btn-danger">
+                Rebuild Entire Knowledge Base
+            </button>
+            <p class="warning-text">
+                This will clear and rebuild the KB from all uploaded PDFs. Use with caution!
+            </p>
+        </div>
+    </div>
+
+    <script src="upload-script.js"></script>
+</body>
+</html>
