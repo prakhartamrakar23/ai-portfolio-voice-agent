@@ -1,7 +1,7 @@
 
 // ─── Backend URL ─────────────────────────────────────────────────
 // Change this to your deployed backend URL (e.g. Render URL) when going live
-const BACKEND_URL = "http://localhost:8000";
+const BACKEND_URL = "https://prakhar-portfolio-with-voice-agent.onrender.com";
 
 // ─── Cursor Glow ─────────────────────────────────────────────────
 const cursorGlow = document.getElementById('cursor-glow');
