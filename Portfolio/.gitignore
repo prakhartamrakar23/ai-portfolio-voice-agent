@@ -39,5 +39,11 @@ wheels/
 .DS_Store
 Thumbs.db
 
+chroma_db/
+uploaded_pdfs/
+__pycache__/
+*.pyc
+.env
+
 # Don't ignore chroma_db - it needs to be committed for deployment!
 # chroma_db/
